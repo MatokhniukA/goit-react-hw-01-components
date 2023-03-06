@@ -1,36 +1,36 @@
 import PropTypes from 'prop-types'
-import { List} from "./Profile.styled";
+import { List, ListItem, Avatar, Container, Label, Name } from "./Profile.styled";
 
 export const Profile = ({ user: { username, tag, location, avatar, stats } }) => {
 // export const Profile = ({ username, tag, location, avatar, stats } ) => {
   return (
-  <div className="profile">
+  <Container className="profile">
     <div className="description">
-     <img
+     <Avatar
       src={avatar}
       alt={username}
       className="avatar"
     />
-     <p className="name">{username}</p>
+     <Name className="name">{username}</Name>
      <p className="tag">{tag}</p>
      <p className="location">{location}</p>
    </div>
 
   <List>
-    <li>
-      <span className="label">Followers: </span>
+    <ListItem>
+      <Label className="label">Followers</Label>
         <span className="quantity">{stats.followers}</span>
-    </li>
-    <li>
-      <span className="label">Views: </span>
+    </ListItem>
+    <ListItem>
+      <Label className="label">Views</Label>
       <span className="quantity">{stats.views}</span>
-    </li>
-    <li>
-      <span className="label">Likes: </span>
+    </ListItem>
+    <ListItem>
+      <Label className="label">Likes</Label>
       <span className="quantity">{stats.likes}</span>
-    </li>
+    </ListItem>
   </List>
-</div>)
+</Container>)
 }
 
 // propTypes for {destructured props}

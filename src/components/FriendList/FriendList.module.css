@@ -1,0 +1,36 @@
+.friendList {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.friendItem {
+    width: 245px;
+    border: 1px solid black;
+    border-radius: 15px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+}
+
+.friendName {
+    font-size: 20px;
+    font-weight: 700;
+    margin-left: 15px;
+}
+
+.avatar {
+    margin-left: 25px;
+}
+
+.offLine {
+outline: 10px solid red;
+margin-left: 25px;
+}
+
+.onLine {
+    outline: 10px solid green;
+    margin-left: 25px;
+}
